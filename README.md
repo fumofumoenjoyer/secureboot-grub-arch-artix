@@ -46,6 +46,10 @@ Sign all unsigned files (below is what I needed to sign, adjust according to you
 ```
 sudo sbctl sign -s /efi/EFI/GRUB/grubx64.efi
 ```
+You may also need to sign the kernels like this, (they may not show up in sbctl verify):
+```
+sudo sbctl sign -s /boot/vmlinuz-linux
+```
 You may get an error because of an issue with certain files being immutable. To make those files mutable, run the following command for each file then re-sign afterwards:
 ```
 sudo chattr -i /sys/firmware/efi/efivars/<filename>
