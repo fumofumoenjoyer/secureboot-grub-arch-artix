@@ -1,4 +1,4 @@
-# secureboot-grub-arch
+# secureboot-grub-arch-artix
 How to enable Secure Boot with GRUB in Arch and Arch-Based distros.
 
 I took this from [this reddit post](https://www.reddit.com/r/archlinux/comments/10pq74e/my_easy_method_for_setting_up_secure_boot_with/) credits to the original writer
