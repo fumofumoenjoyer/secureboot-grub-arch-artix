@@ -46,6 +46,12 @@ Sign all unsigned files (below is what I needed to sign, adjust according to you
 ```
 sudo sbctl sign -s /efi/EFI/GRUB/grubx64.efi
 ```
+You can use this command to sign everything (beware yo may still needs to to the next step)
+```
+sbctl verify | sed 's/✗ /sbctl sign -s /e'
+
+```
+
 You may also need to sign the kernels like this, (they may not show up in sbctl verify):
 ```
 sudo sbctl sign -s /boot/vmlinuz-linux
