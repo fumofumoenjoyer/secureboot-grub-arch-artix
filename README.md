@@ -31,13 +31,15 @@ Create your custom secure boot keys:
 sudo sbctl create-keys
 ```
 Enroll your custom keys (note -m is required to include Microsoft's CA certificates)
+### DO NOT MODIFY THIS IT COULD BREAK YOUR WHOLE PC AT THE HARDWARE LEVEL (Some firmware is signed and verified with Microsoft's keys when secure boot is enabled. Not validating devices could brick them. DO NOT use your keys without enrolling Microsoft's unless you know your shit)
+
 ```
 sudo sbctl enroll-keys -m
 ```
 Verify that your keys have successfully been enrolled:
 ```
 sbctl status
-```
+``` 
 Check which files need to be signed for secure boot to work:
 ```
 sudo sbctl verify
