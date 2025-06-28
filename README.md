@@ -50,7 +50,7 @@ sudo sbctl sign -s /efi/EFI/GRUB/grubx64.efi
 ```
 You can use this command to sign everything (beware you may still need to to the next step)
 ```
-sbctl verify | sed 's/✗ /sbctl sign -s /e'
+sudo sbctl verify | sed -E 's|^.* (/.+) is not signed$|sbctl sign -s "\1"|e'
 
 ```
 
